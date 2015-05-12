@@ -1,5 +1,10 @@
 echo "BUILDING RABBITMQ CONTAINER"
 docker build -t guilhermemmb/yctrabbit .
+
+echo "REMOVING OLD YCTNODE"
+docker rm -f yctrabbit 
+docker rmi -f rabbit
+
 echo "RUNNING RABBITQ CONTAINER WITH DEFAULT DATA"
 docker run -d \
 	-i \
@@ -7,5 +12,5 @@ docker run -d \
     -p 15672:15672 \
     -e RABBITMQ_USERNAME=admin \
     -e RABBITMQ_PASSWORD=admin \
-    --name rabbitmq \
-    guilhermemmb/yctrabbit
+    --name rabbit \
+    -t guilhermemmb/yctrabbit
