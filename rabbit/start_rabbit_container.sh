@@ -1,5 +1,5 @@
 echo "BUILDING RABBITMQ CONTAINER"
-docker build -t guilhermemmb/yctrabbit .
+docker build --no-cache -t guilhermemmb/yctrabbit .
 
 echo "REMOVING OLD YCTNODE"
 docker rm -f yctrabbit 
