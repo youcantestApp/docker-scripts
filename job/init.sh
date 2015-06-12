@@ -1,3 +1,3 @@
-#!/bin/bash
+#/bin/bash
 cd yctJob 
-nodejs app.js &
+pm2 start app.js --watch
