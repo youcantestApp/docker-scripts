@@ -1,9 +1,9 @@
 echo "BUILDING RABBITMQ CONTAINER"
-docker build --no-cache -t guilhermemmb/yctrabbit .
+docker build --no-cache -t guilhermemmb/rabbitmq .
 
 echo "REMOVING OLD YCTNODE"
-docker rm -f yctrabbit 
-docker rmi -f rabbit
+docker rm -f rabbitmq 
+docker rmi -f rabbitmq
 
 echo "RUNNING RABBITQ CONTAINER WITH DEFAULT DATA"
 docker run -d \
@@ -13,4 +13,4 @@ docker run -d \
     -e RABBITMQ_USERNAME=admin \
     -e RABBITMQ_PASSWORD=admin \
     --name rabbit \
-    -t guilhermemmb/yctrabbit
+    -t yct/rabbitmq

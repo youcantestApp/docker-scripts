@@ -11,6 +11,6 @@ RUN npm install -g grunt-cli
 
 RUN git clone https://github.com/youcantestApp/test-scheduler.git && cd test-scheduler && npm i
 
-ADD ./docker_init.sh /
+ADD ./docker_init_script.sh /
 
 RUN chmod +x /*.sh

@@ -1,8 +1,8 @@
 FROM rails
 RUN apt-get -y update && apt-get -y install git vim
-RUN git clone https://github.com/guilhermemmb/youCanTestRails.git
+RUN git clone https://github.com/youcantestApp/web.git
 
-RUN cd youCanTestRails && gem install bundler && bundler install
+RUN cd web && gem install bundler && bundler install
 
 ADD ./init.sh /
 RUN chmod +x /*.sh
