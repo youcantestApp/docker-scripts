@@ -1,4 +1,3 @@
 #!/bin/bash
-docker rm -f test-scheduler
-docker build --no-cache -t guilhermemmb/test-scheduler .
-docker run -d -i  --name test-scheduler --link rabbit:rabbit --link mongodb:mongodb -t guilhermemmb/test-scheduler
+docker build -t yct/healthcheck .
+docker run -d -i  --name healthcheck --link rabbit:rabbit --link mongodb:mongodb -t yct/healthcheck

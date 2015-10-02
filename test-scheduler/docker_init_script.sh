@@ -1,4 +1,4 @@
 #/bin/bash
-cd test-scheduler
+cd healthcheck
 grunt build
-pm2 start pm2/test-scheduler.json
+pm2 start pm2/healthcheck.json

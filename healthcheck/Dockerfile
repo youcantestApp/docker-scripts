@@ -9,7 +9,7 @@ RUN apt-get -y install nodejs
 RUN npm install -g pm2@latest
 RUN npm install -g grunt-cli
 
-RUN git clone https://github.com/youcantestApp/healthcheck.git && cd healthcheck && npm i
+RUN git clone https://github.com/youcantestApp/test-scheduler.git && cd test-scheduler && npm i
 
 ADD ./docker_init_script.sh /
 
